@@ -274,28 +274,53 @@
       -->
 
       <section class="video has-bg-image" aria-label="الفيديو"
-        style="background-image: url('./assets/images/video-bg.png')">
-        <div class="container">
-
+      style="background-image: url('./assets/images/video-bg.png')">
+      <div class="container">
           <div class="video-card">
-            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
-              <img src="./assets/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="فيديو تعريفي"
-                class="img-cover">
-              <button class="play-btn" aria-label="تشغيل الفيديو">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
-              </button>
-            </div>
-
-            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
-              class="shape video-shape-1">
-
-            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
-              class="shape video-shape-2">
-
+              <div class="video-banner img-holder has-after" style="position: relative; width: 970px; height: 550px;">
+                  
+                  <!-- Static Image -->
+                  <img id="videoBannerImage" src="./assets/images/video-banner.jpg" width="970" height="550" 
+                       loading="lazy" alt="فيديو تعريفي" class="img-cover" style="position: absolute; top: 0; left: 0; z-index: 1;">
+  
+                  <!-- Play Button -->
+                  <button class="play-btn" aria-label="تشغيل الفيديو" id="playButton" 
+                      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                  </button>
+  
+                  <!-- YouTube iframe (hidden initially) -->
+                  <iframe id="youtubeVideo" width="970" height="550" 
+                      src="https://www.youtube.com/embed/uUBHYd752lU?autoplay=1&mute=1" 
+                      title="الكراكن مخلوق حقيقي أم أسطوري؟" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen 
+                      style="position: absolute; top: 0; left: 0; display:none; z-index: 3;">
+                  </iframe>
+              </div>
+  
+              <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+                  class="shape video-shape-1">
+  
+              <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+                  class="shape video-shape-2">
           </div>
-
-        </div>
-      </section>
+      </div>
+  </section>
+  
+  <script>
+      document.getElementById('playButton').addEventListener('click', function() {
+          // Hide the play button (not the image)
+          document.getElementById('playButton').style.display = 'none';
+          
+          // Show the video iframe, it will appear on top of the image
+          document.getElementById('youtubeVideo').style.display = 'block';
+          
+          // Optionally hide the static image once the video starts playing
+          document.getElementById('videoBannerImage').style.display = 'none';
+      });
+  </script>
+  
 
       <!-- 
         - #الإحصائيات
