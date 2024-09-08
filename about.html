@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - العلامات الوصفية الرئيسية
+  -->
+  <title>       من نحن </title>
+  <meta name="title" content="المنتدى المغربي للدراسات القانونية">
+  <meta name="description" content="المنتدى المغربي للدراسات القانونية، منصة للنقاشات القانونية وطرح الآراء والأبحاث.">
+
+  <!-- 
+    - رمز الفافيكون
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - رابط CSS المخصص
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - رابط خطوط جوجل لتطبيق خط كايرو
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - تحميل مسبق للصور
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+
+  <!-- Custom Styles to Apply Cairo Font Across All Text -->
+  <style>
+    body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, li, address, .navbar-link, .footer-link, .btn, .section-title, .section-text, .card-title, .card-text, .card-subtitle {
+      font-family: 'Cairo', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #الرأس
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="162" height="50" alt="شعار المنتدى المغربي للدراسات القانونية">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="162" height="50" alt="شعار المنتدى المغربي للدراسات القانونية">
+          </a>
+
+          <button class="nav-close-btn" aria-label="إغلاق القائمة" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link" data-nav-link>الصفحة الرئيسية</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="about.html" class="navbar-link" data-nav-link>من نحن</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="#courses" class="navbar-link" data-nav-link>المقالات</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="#blog" class="navbar-link" data-nav-link>المدونة</a>
+            </li>
+  
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-nav-link>تواصل معنا</a>
+            </li>
+  
+          </ul>
+  
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="header-action-btn" aria-label="تفعيل البحث" title="بحث" style="display: none;">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="السلة" title="سلة" style="display: none;">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge">0</span>
+        </button>
+
+        <a href="#" class="btn has-before" style="display: none;">
+          <span class="span">اشترك معنا</span>
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="فتح القائمة" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+      <!-- 
+        - #الفئات
+      -->
+
+      <section class="section category" aria-label="الخدمات">
+        <div class="container">
+
+          <p class="section-subtitle">من نحن </p>
+
+          <h2 class="h2 section-title">
+            <span class="span">المنتدى المغربي  </span> للدراسات القانونية    
+          </h2>
+
+          <p class="section-text">
+            نقدم منصة لمشاركة النقاشات القانونية والآراء حول التشريعات والقوانين.
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card" style="--color: 170, 75%, 41%">
+                <div class="card-icon">
+                  <img src="./assets/images/category-1.svg" width="40" height="40" loading="lazy"
+                    alt="نقاشات قانونية" class="img">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">نقاشات قانونية</a>
+                </h3>
+                <p class="card-text">
+                  طرح مواضيع للنقاش حول مختلف القضايا القانونية والتشريعية.
+                </p>
+                <span class="card-badge">150+ مواضيع</span>
+              </div>
+            </li>
+
+            <!-- New Card -->
+<li>
+    <div class="category-card" style="--color: 60, 85%, 45%">
+      <div class="card-icon">
+        <img src="./assets/images/category-4.svg" width="40" height="40" loading="lazy"
+          alt="استشارات قانونية" class="img">
+      </div>
+      <h3 class="h3">
+        <a href="#" class="card-title">استشارات قانونية</a>
+      </h3>
+      <p class="card-text">
+        تقديم الاستشارات القانونية المتخصصة في مختلف القضايا القانونية.
+      </p>
+      <span class="card-badge">120+ استشارات</span>
+    </div>
+  </li>
+
+            <li>
+              <div class="category-card" style="--color: 351, 83%, 61%">
+                <div class="card-icon">
+                  <img src="./assets/images/category-2.svg" width="40" height="40" loading="lazy"
+                    alt="طرح الآراء القانونية" class="img">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">طرح الآراء القانونية</a>
+                </h3>
+                <p class="card-text">
+                  تبادل الآراء القانونية حول القوانين السارية والمواضيع المختلفة.
+                </p>
+                <span class="card-badge">250+ مشاركين</span>
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card" style="--color: 229, 75%, 58%">
+                <div class="card-icon">
+                  <img src="./assets/images/category-3.svg" width="40" height="40" loading="lazy"
+                    alt="الأبحاث القانونية" class="img">
+                </div>
+                <h3 class="h3">
+                  <a href="#" class="card-title">الأبحاث القانونية</a>
+                </h3>
+                <p class="card-text">
+                  أبحاث متخصصة في القوانين والتشريعات بمساهمة مختصين.
+                </p>
+                <span class="card-badge">50+ أبحاث</span>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #عنّا
+      -->
+
+      <section class="section about" id="about" aria-label="من نحن">
+        <div class="container">
+
+          <figure class="about-banner">
+            <div class="img-holder" style="--width: 520; --height: 370;">
+              <img src="./assets/images/about-banner.jpg" width="520" height="370" loading="lazy" alt="لافتة من نحن"
+                class="img-cover">
+            </div>
+            <img src="./assets/images/about-shape-1.svg" width="360" height="420" loading="lazy" alt=""
+              class="shape about-shape-1">
+            <img src="./assets/images/about-shape-2.svg" width="371" height="220" loading="lazy" alt=""
+              class="shape about-shape-2">
+            <img src="./assets/images/about-shape-3.png" width="722" height="528" loading="lazy" alt=""
+              class="shape about-shape-3">
+          </figure>
+
+          <div class="about-content">
+            <p class="section-subtitle">من نحن</p>
+            <h2 class="h2 section-title">
+              المنتدى المغربي <span class="span">للدراسات القانونية</span>
+            </h2>
+
+            <p class="section-text">
+              المنتدى المغربي للدراسات القانونية هو منصة تهدف إلى تعزيز النقاشات القانونية، تقديم الأبحاث، وطرح الآراء القانونية حول القوانين والتشريعات المختلفة.
+            </p>
+
+            <ul class="about-list">
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                <span class="span">نقاشات قانونية شاملة</span>
+              </li>
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                <span class="span">آراء ومساهمات من خبراء</span>
+              </li>
+              <li class="about-item">
+                <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                <span class="span">أبحاث قانونية متخصصة</span>
+              </li>
+            </ul>
+
+            <img src="./assets/images/about-shape-4.svg" width="100" height="100" loading="lazy" alt=""
+              class="shape about-shape-4">
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #الفيديو
+      -->
+
+      <section class="video has-bg-image" aria-label="الفيديو"
+        style="background-image: url('./assets/images/video-bg.png')">
+        <div class="container">
+
+          <div class="video-card">
+            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
+              <img src="./assets/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="فيديو تعريفي"
+                class="img-cover">
+              <button class="play-btn" aria-label="تشغيل الفيديو">
+                <ion-icon name="play" aria-hidden="true"></ion-icon>
+              </button>
+            </div>
+
+            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
+              class="shape video-shape-1">
+
+            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
+              class="shape video-shape-2">
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #الإحصائيات
+      -->
+
+      <section class="section stats" aria-label="الإحصائيات">
+        <div class="container">
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="stats-card" style="--color: 170, 75%, 41%">
+                <h3 class="card-title">500+</h3>
+                <p class="card-text">مشاركين في النقاشات</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 351, 83%, 61%">
+                <h3 class="card-title">100+</h3>
+                <p class="card-text">آراء قانونية مطروحة</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 260, 100%, 67%">
+                <h3 class="card-title">99%</h3>
+                <p class="card-text">معدل رضا المشاركين</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="stats-card" style="--color: 42, 94%, 55%">
+                <h3 class="card-title">50+</h3>
+                <p class="card-text">أبحاث قانونية منشورة</p>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #تذييل الصفحة
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="شعار المنتدى المغربي للدراسات القانونية">
+          </a>
+          <p class="footer-brand-text">
+            نسعى لنشر الوعي القانوني من خلال تقديم نقاشات وآراء قانونية مدعومة بأبحاث متخصصة.
+          </p>
+          <div class="wrapper">
+            <span class="span">العنوان:</span>
+            <address class="address">123 شارع القانون، الدار البيضاء</address>
+          </div>
+          <div class="wrapper">
+            <span class="span">الهاتف:</span>
+            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+          </div>
+          <div class="wrapper">
+            <span class="span">البريد الإلكتروني:</span>
+            <a href="mailto:info@moroccolawforum.com" class="footer-link">info@moroccolawforum.com</a>
+          </div>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">روابط سريعة</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">من نحن</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">النقاشات القانونية</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">فريق المنتدى</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">الأبحاث القانونية</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">الأخبار</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">الشروط والأحكام</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">تواصل معنا</p>
+          </li>
+          <li>
+            <a href="#" class="footer-link">اتصل بنا</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">المدونة</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">آخر الأخبار</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">الأسئلة الشائعة</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">الفعاليات القادمة</a>
+          </li>
+        </ul>
+
+        <div class="footer-list">
+          <p class="footer-list-title">البريد الإلكتروني</p>
+          <p class="footer-list-text">أدخل بريدك الإلكتروني لتلقي آخر الأخبار حول النقاشات القانونية.</p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="بريدك الإلكتروني" required class="input-field">
+            <button type="submit" class="btn has-before">
+              <span class="span">اشترك</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <ul class="social-list">
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">حقوق النشر © 2024 جميع الحقوق محفوظة لـ <a href="#" class="copyright-link">المنتدى المغربي للدراسات القانونية</a></p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- 
+    - #العودة إلى الأعلى
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="العودة إلى الأعلى" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <!-- 
+    - رابط JS المخصص
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - رابط ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

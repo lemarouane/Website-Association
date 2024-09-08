@@ -1392,3 +1392,14 @@ body[lang="ar"], h1, h2, h3, p, .navbar-link, .section-title, .footer-link, .sec
   }
 
 }
+
+
+
+.center-section {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  text-align: center;      /* Centers the text */
+  width: 100vw;            /* Full width of the viewport */
+  margin: 0 auto;          /* Center the section in the middle of the page */
+}
