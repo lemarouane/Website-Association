@@ -631,7 +631,6 @@ body[lang="ar"], h1, h2, h3, p, .navbar-link, .section-title, .footer-link, .sec
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  overflow: hidden;
   margin-block: 15px 8px;
   transition: var(--transition-1);
 }

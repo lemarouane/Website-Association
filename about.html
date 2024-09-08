@@ -75,27 +75,27 @@
 
         <ul class="navbar-list">
 
-            <li class="navbar-item">
-              <a href="index.html" class="navbar-link" data-nav-link>الصفحة الرئيسية</a>
-            </li>
-  
-            <li class="navbar-item">
-              <a href="about.html" class="navbar-link" data-nav-link>من نحن</a>
-            </li>
-  
-            <li class="navbar-item">
-              <a href="#courses" class="navbar-link" data-nav-link>المقالات</a>
-            </li>
-  
-            <li class="navbar-item">
-              <a href="#blog" class="navbar-link" data-nav-link>المدونة</a>
-            </li>
-  
-            <li class="navbar-item">
-              <a href="#" class="navbar-link" data-nav-link>تواصل معنا</a>
-            </li>
-  
-          </ul>
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>الرئيسية</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="about.html" class="navbar-link" data-nav-link>من نحن</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="articles.html" class="navbar-link" data-nav-link>الأبحاث</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>النقاشات القانونية</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>تواصل معنا</a>
+          </li>
+
+        </ul>
   
 
       </nav>
@@ -446,13 +446,52 @@
           <p class="footer-list-title">البريد الإلكتروني</p>
           <p class="footer-list-text">أدخل بريدك الإلكتروني لتلقي آخر الأخبار حول النقاشات القانونية.</p>
 
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="بريدك الإلكتروني" required class="input-field">
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="email" name="email_address" placeholder="بريدك الإلكتروني" required class="input-field">
             <button type="submit" class="btn has-before">
               <span class="span">اشترك</span>
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
             </button>
           </form>
+          
+          <!-- Success Popup -->
+          <div id="thankYouPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; background-color:#4CAF50; color:white; border-radius:10px;">
+            <p>شكراً لك! تم الاشتراك بنجاح.</p>
+          </div>
+          
+          <script>
+            document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the default form submission
+          
+              // Get the email value
+              var email = document.getElementById('email').value;
+          
+              // Send the data to Pabbly using AJAX
+              fetch('https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZkMDYzNDA0MzY1MjZhNTUzNDUxM2Ii_pc', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  email_address: email
+                }),
+              })
+              .then(response => response.json())
+              .then(data => {
+                // Show thank you popup on successful submission
+                document.getElementById('thankYouPopup').style.display = 'block';
+          
+                // Optionally hide the popup after a few seconds
+                setTimeout(function() {
+                  document.getElementById('thankYouPopup').style.display = 'none';
+                }, 3000);
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+            });
+          </script>
+          
 
           <ul class="social-list">
             <li>
