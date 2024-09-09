@@ -980,7 +980,8 @@ body[lang="ar"], h1, h2, h3, p, .navbar-link, .section-title, .footer-link, .sec
 
   .grid-list { grid-template-columns: 1fr 1fr; }
 
-  :is(.course, .blog) .grid-list { grid-template-columns: 1fr; }
+  :is(.course, .blog) .grid-list { grid-template-columns: 1fr;          margin-top: 2em;
+  }
 
 
 
