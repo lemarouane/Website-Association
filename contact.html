@@ -6,170 +6,340 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
-    - العلامات الوصفية الرئيسية
-  -->
-  <title>   أبحاث قانونية في التشريعات
-</title>
+  <title>تواصل معنا</title>
   <meta name="title" content="المنتدى المغربي للدراسات القانونية">
   <meta name="description" content="المنتدى المغربي للدراسات القانونية، منصة للنقاشات القانونية وطرح الآراء والأبحاث.">
 
-
-  <!-- 
-    - رمز الفافيكون
-  -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - رابط CSS المخصص
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
-    - رابط خطوط جوجل لتطبيق خط كايرو
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- 
-    - تحميل مسبق للصور
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-bg.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
-  <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
-
-  <!-- Custom Styles to Apply Cairo Font Across All Text -->
   <style>
+    /* Global Styles */
     body, h1, h2, h3, h4, h5, h6, p, a, span, button, input, li, address, .navbar-link, .footer-link, .btn, .section-title, .section-text, .card-title, .card-text, .card-subtitle {
-      font-family: 'Cairo', sans-serif;
+        font-family: 'Cairo', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-  </style>
+
+    body {
+        background-color: #f4f7f6;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: hsl(351, 83%, 61%);
+    }
+
+    h2 {
+        color: hsl(351, 83%, 61%);
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    /* Container for the form and map */
+    .form-map-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        flex-wrap: wrap;
+        margin: 2em 0;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+        flex: 1;
+        padding: 2em;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e1e1e1;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .contact-form:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5em;
+    }
+
+    .contact-form .input-group {
+        margin-bottom: 1.5em;
+    }
+
+    .contact-form label {
+        font-weight: 500;
+        margin-bottom: 0.5em;
+        display: block;
+        color: #555;
+    }
+
+    .contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.4em; /* Further increased padding for better spacing */
+    border: 1px solid #ccc;
+    border-radius: 12px; /* Softer rounded corners */
+    font-size: 1.4rem; /* Larger font size for better visibility */
+    background-color: #f9f9f9; /* Light background for inputs */
+    color: #333; /* Darker text color for better contrast */
+    transition: all 0.3s ease-in-out; /* Smooth transition on focus */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    font-size: 1.2rem; /* Larger placeholder text size */
+    color: #999; /* Lighter color for placeholder */
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+    background-color: #fff; /* Lighten background on hover */
+    border-color: hsl(351, 83%, 61%); /* Highlighted border on hover */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: hsl(351, 83%, 61%);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2); /* Soft glow effect on focus */
+    background-color: #fff;
+    outline: none; /* Remove default outline */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow resizing vertically only for the textarea */
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #444; /* Darker text color for labels */
+    margin-bottom: 0.5em;
+    font-size: 1.4rem; /* Larger label text */
+    display: block;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1.4em; /* Increased padding for a better button look */
+    background-color: hsl(351, 83%, 61%);
+    color: white;
+    border: none;
+    border-radius: 12px; /* Match the input border radius */
+    font-size: 1.4rem; /* Larger font size for the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: hsl(351, 73%, 50%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow on hover */
+}
+
+    /* Map Container Styles */
+    .map-container {
+        flex: 1;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e1e1e1;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    /* Footer Styles */
+    .footer {
+        background-color: #2c2c2c;
+        padding: 2em 0;
+        color: #f4f4f4;
+    }
+
+    .footer .footer-brand, .footer ul {
+        margin-bottom: 2em;
+    }
+
+    .footer a {
+        color: #f4f4f4;
+    }
+
+    .footer a:hover {
+        color: #4CAF50;
+    }
+
+    .footer ul {
+        list-style: none;
+    }
+
+    .footer ul li {
+        margin-bottom: 0.5em;
+    }
+
+    .footer-list-title {
+        font-weight: bold;
+        margin-bottom: 1em;
+        color: #f4f4f4;
+    }
+
+    .footer-brand img {
+        margin-bottom: 1em;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 1em;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive layout for mobile */
+    @media (max-width: 768px) {
+        .form-map-container {
+            flex-direction: column;
+        }
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+        }
+    }
+
+    /* Equal Height for Form and Map on Laptop Screens */
+    @media (min-width: 1024px) {
+        .form-map-container {
+            align-items: stretch;
+        }
+
+        .contact-form,
+        .map-container {
+            height: 600px;
+        }
+    }
+</style>
+
 
 </head>
 
 <body id="top">
 
-  <!-- 
-    - #الرأس
-  -->
-
+  <!-- Header and Navbar -->
   <header class="header" data-header>
     <div class="container">
-
       <a href="#" class="logo">
         <img src="./assets/images/logo.svg" width="162" height="50" alt="شعار المنتدى المغربي للدراسات القانونية">
       </a>
-
       <nav class="navbar" data-navbar>
-
         <div class="wrapper">
           <a href="#" class="logo">
             <img src="./assets/images/logo.svg" width="162" height="50" alt="شعار المنتدى المغربي للدراسات القانونية">
           </a>
-
           <button class="nav-close-btn" aria-label="إغلاق القائمة" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
-
         <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link" data-nav-link>الرئيسية</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="about.html" class="navbar-link" data-nav-link>من نحن</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="articles.html" class="navbar-link" data-nav-link>الأبحاث</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="debat.html" class="navbar-link" data-nav-link>النقاشات القانونية</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="contact.html" class="navbar-link" data-nav-link>تواصل معنا</a>
-          </li>
-
+          <li class="navbar-item"><a href="index.html" class="navbar-link" data-nav-link>الرئيسية</a></li>
+          <li class="navbar-item"><a href="about.html" class="navbar-link" data-nav-link>من نحن</a></li>
+          <li class="navbar-item"><a href="articles.html" class="navbar-link" data-nav-link>الأبحاث</a></li>
+          <li class="navbar-item"><a href="debat.html" class="navbar-link" data-nav-link>النقاشات القانونية</a></li>
+          <li class="navbar-item"><a href="#" class="navbar-link" data-nav-link>تواصل معنا</a></li>
         </ul>
-
       </nav>
-
       <div class="header-actions">
-
-        <button class="header-action-btn" aria-label="تفعيل البحث" title="بحث" style="display: none;">
-          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-        </button>
-
-        <button class="header-action-btn" aria-label="السلة" title="سلة" style="display: none;">
-          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
-          <span class="btn-badge">0</span>
-        </button>
-
-        <a href="#" class="btn has-before" style="display: none;">
-          <span class="span">اشترك الآن</span>
-          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-        </a>
-
         <button class="header-action-btn" aria-label="فتح القائمة" data-nav-toggler>
           <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
         </button>
-
       </div>
-
     </div>
   </header>
-
-  <!-- 
-    - #البطل
-  -->
 
   <main>
     <article>
 
-
-
-
-      <!-- 
-        - #الأبحاث
-      -->
-
-      <section class="section course" id="courses" aria-label="الأبحاث">
+      <!-- Section with Contact Form and Map -->
+      <section class="section" aria-label="تواصل معنا">
         <div class="container">
-      
-          <p class="section-subtitle">الأبحاث القانونية</p>
-          <h2 class="h2 section-title">أبحاث قانونية في التشريعات</h2>
-      
-          <p class="section-text">
-            إن الأبحاث القانونية في التشريعات تُعد من أبرز الأنشطة التي يقوم بها المتخصصون في القانون بهدف تطوير وتحليل وفهم النصوص القانونية المختلفة التي تنظم حياة الأفراد والجماعات. تعد هذه الأبحاث وسيلة أساسية لفهم التشريعات السارية وتحليل تأثيرها على المجتمع. كما تساعد هذه الدراسات على إبراز التحديات التي تواجه تطبيق القوانين وطرح الحلول الممكنة لمعالجة تلك التحديات.
-          </p>
-          
-          <p class="section-text">
-            تُغطي الأبحاث القانونية مجموعة واسعة من المواضيع، بدءًا من التشريعات المدنية والتجارية، إلى القوانين الجنائية والدستورية. تقوم هذه الأبحاث بمراجعة وتقييم النصوص القانونية الحالية، مع تسليط الضوء على أي ثغرات قانونية قد تستدعي التدخل التشريعي. كما تُركز على كيفية تطبيق هذه التشريعات في الواقع العملي ومدى فعاليتها في تحقيق العدالة والمساواة بين المواطنين.
-          </p>
-      
-          <p class="section-text">
-            من جهة أخرى، تسعى الأبحاث القانونية إلى دراسة التشريعات الجديدة التي تُطرح في المجالس التشريعية، وتحليل كيفية تأثيرها على حقوق الأفراد وواجباتهم. يساعد هذا النوع من الدراسات على التنبؤ بالتحديات المستقبلية التي قد تنشأ من تطبيق القوانين الجديدة، مما يساهم في تعزيز سيادة القانون وضمان تحقيق الاستقرار الاجتماعي.
-          </p>
-      
-          <p class="section-text">
-            إن الاهتمام بالأبحاث القانونية في التشريعات لا يقتصر فقط على الباحثين القانونيين والمحامين، بل يمتد ليشمل المشرعين وصناع القرار الذين يعتمدون على نتائج هذه الأبحاث لتطوير الإطار القانوني للدولة. لهذا، تُعتبر هذه الأبحاث من الركائز الأساسية في تطوير النظام القانوني وضمان استدامته وملاءمته للتطورات الاجتماعية والاقتصادية المتسارعة.
-          </p>
-      
-          <p class="section-text">
-            في نهاية المطاف، تسهم الأبحاث القانونية في التشريعات في تعزيز الوعي القانوني لدى المواطنين، حيث تُمكنهم من فهم حقوقهم وواجباتهم بشكل أفضل. كما أنها توفر للمشرعين أدوات تحليلية تمكنهم من تحسين التشريعات الحالية وتقديم اقتراحات جديدة تتماشى مع متطلبات العصر.
-          </p>
-      
+          <h2 class="h2 section-title">تواصل معنا</h2>
+          <div class="form-map-container">
+            <!-- Contact Form -->
+            <form class="contact-form" id="contactForm">
+                <div class="input-group">
+                  <label for="name">الاسم الكامل</label>
+                  <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                </div>
+                <div class="input-group">
+                  <label for="email">البريد الإلكتروني</label>
+                  <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+                </div>
+                <div class="input-group">
+                  <label for="message">الرسالة</label>
+                  <textarea id="message" name="message" required placeholder="اكتب رسالتك هنا" rows="5"></textarea>
+                </div>
+                <button type="submit">إرسال</button>
+              </form>
+              
+              <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent default form submission
+              
+                  // Collect form data
+                  var formData = new FormData(this);
+              
+                  // Convert form data to URL-encoded string
+                  var formDataObject = {};
+                  formData.forEach(function(value, key){
+                      formDataObject[key] = value;
+                  });
+                  var queryString = new URLSearchParams(formDataObject).toString();
+              
+                  // Send the data to the Google Apps Script Web App
+                  fetch('https://script.google.com/macros/s/AKfycbz3mf3DZE2BW8whDgZxT58AmaQqt1oyeUUs-VxW_ODHavDqGn4AbyBv88qsom4ja2Tr/exec', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: queryString
+                  })
+                  .then(response => response.text())
+                  .then(data => {
+                    alert('تم إرسال الرسالة بنجاح!');
+                    // Optionally, clear the form fields after successful submission
+                    document.getElementById('contactForm').reset();
+                  })
+                  .catch(error => {
+                    console.error('Error:', error);
+                  });
+                });
+              </script>
+              
+            <!-- Embedded Map -->
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d206.09906392625936!2d-6.582708254074296!3d34.25913112959364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sma!4v1726008149304!5m2!1sen!2sma" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
         </div>
       </section>
-      
-
 
     </article>
   </main>
@@ -262,9 +432,7 @@
           <div id="thankYouPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px; background-color:#4CAF50; color:white; border-radius:10px;">
             <p>شكراً لك! تم الاشتراك بنجاح.</p>
           </div>
-             
           
-
           <script>
             document.getElementById('newsletterForm').addEventListener('submit', function(event) {
               event.preventDefault(); // Prevent the default form submission
