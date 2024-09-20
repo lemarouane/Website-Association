@@ -145,9 +145,6 @@
           <h2 class="h2 section-title">
             اكتشف  <span class="span">الأبحاث الجديدة</span>
           </h2>
-          <ul class="grid-list" id="articlesList"></ul>
-            <!-- Articles will be dynamically inserted here -->
-          </ul>
 
           <ul class="grid-list">
 
@@ -778,58 +775,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-    function displayArticles() {
-      const articles = JSON.parse(localStorage.getItem('articles')) || [];
-      const articlesList = document.getElementById('articlesList');
-      articlesList.innerHTML = '';
-      
-      articles.forEach((article, index) => {
-        const articleElement = document.createElement('li');
-        articleElement.innerHTML = `
-          <div class="course-card">
-            <figure class="card-banner img-holder" style="--width: 370; --height: 220;">
-              <img src="${article.imageUrl || './assets/images/course-1.jpg'}" width="370" height="220" loading="lazy"
-                alt="${article.title}" class="img-cover">
-            </figure>
-            <div class="abs-badge">
-              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-              <span class="span">${article.duration}</span>
-            </div>
-            <div class="card-content">
-              <span class="badge">${article.level}</span>
-              <h3 class="h3">
-                <a href="article.html?id=${index}" class="card-title">${article.title}</a>
-              </h3>
-              <div class="wrapper">
-                <div class="rating-wrapper">
-                  ${'<ion-icon name="star"></ion-icon>'.repeat(Math.floor(article.rating))}
-                  ${article.rating % 1 !== 0 ? '<ion-icon name="star-half-outline"></ion-icon>' : ''}
-                </div>
-                <p class="rating-text">(${article.rating} /5 تقييم)</p>
-              </div>
-              <data class="price" value="29">مجانية</data>
-              <ul class="card-meta-list">
-                <li class="card-meta-item">
-                  <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
-                  <span class="span">${article.articleCount} مقالات</span>
-                </li>
-                <li class="card-meta-item">
-                  <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-                  <span class="span">${article.researcherCount} باحث</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        `;
-        articlesList.appendChild(articleElement);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', displayArticles);
-  </script>
-
-  
 
 </body>
 
