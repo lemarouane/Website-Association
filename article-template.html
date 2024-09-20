@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عنوان المقال</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Include your site header here -->
+    </header>
+
+    <main>
+        <article>
+            <h1 id="articleTitle">عنوان المقال</h1>
+            <img id="articleImage" src="" alt="صورة المقال">
+            <div id="articleMeta">
+                <span id="articleDuration"></span>
+                <span id="articleLevel"></span>
+                <div id="articleRating"></div>
+            </div>
+            <div id="articleContent"></div>
+        </article>
+    </main>
+
+    <footer>
+        <!-- Include your site footer here -->
+    </footer>
+
+    <script>
+        // JavaScript to load the specific article content
+        function loadArticle() {
+            // Get article ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+
+            // Fetch article data (this would come from your backend or local storage)
+            // For now, we'll use placeholder data
+            const article = {
+                title: "عنوان المقال",
+                image: "./assets/images/article-image.jpg",
+                duration: "شهرين",
+                level: "متقدم",
+                rating: 4.5,
+                content: "محتوى المقال..."
+            };
+
+            // Populate the page with article data
+            document.title = article.title;
+            document.getElementById('articleTitle').textContent = article.title;
+            document.getElementById('articleImage').src = article.image;
+            document.getElementById('articleDuration').textContent = article.duration;
+            document.getElementById('articleLevel').textContent = article.level;
+            document.getElementById('articleRating').textContent = `تقييم: ${article.rating}/5`;
+            document.getElementById('articleContent').innerHTML = article.content;
+        }
+
+        // Load the article when the page is ready
+        document.addEventListener('DOMContentLoaded', loadArticle);
+    </script>
+</body>
+</html>
