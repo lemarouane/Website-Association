@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - المنتدى المغربي للدراسات القانونية</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    body, h1, h2, p, label, button {
+      font-family: 'Cairo', sans-serif;
+    }
+    .dashboard-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-container {
+      margin-bottom: 30px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .form-container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .course-card {
+      width: 30%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .course-card img {
+      max-width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <h1>لوحة التحكم لإضافة الأبحاث القانونية</h1>
+    
+    <div class="form-container">
+      <h2>إضافة بحث جديد</h2>
+      <label for="title">عنوان البحث:</label>
+      <input type="text" id="title" placeholder="عنوان البحث">
+      
+      <label for="image">رابط الصورة:</label>
+      <input type="text" id="image" placeholder="أدخل رابط الصورة">
+      
+      <label for="page">اسم صفحة البحث (مثل: article1.html):</label>
+      <input type="text" id="page" placeholder="أدخل اسم الصفحة">
+      
+      <button onclick="addCard()">إضافة البحث</button>
+    </div>
+    
+    <div class="cards-container" id="cards-container">
+      <!-- هنا ستضاف البطاقات الجديدة -->
+    </div>
+  </div>
+
+  <script>
+    function addCard() {
+      const title = document.getElementById('title').value;
+      const image = document.getElementById('image').value;
+      const page = document.getElementById('page').value;
+
+      if (title && image && page) {
+        const cardContainer = document.getElementById('cards-container');
+        const cardHTML = `
+          <div class="course-card">
+            <img src="${image}" alt="${title}">
+            <h3><a href="${page}" class="card-title">${title}</a></h3>
+          </div>
+        `;
+        cardContainer.innerHTML += cardHTML;
+
+        // Clear input fields
+        document.getElementById('title').value = '';
+        document.getElementById('image').value = '';
+        document.getElementById('page').value = '';
+      } else {
+        alert("يرجى ملء جميع الحقول!");
+      }
+    }
+  </script>
+</body>
+
+</html>
