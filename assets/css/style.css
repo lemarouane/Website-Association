@@ -936,8 +936,8 @@ body[lang="ar"], h1, h2, h3, p, .navbar-link, .section-title, .footer-link, .sec
 
 .back-top-btn {
   position: fixed;
-  bottom: 40px;
-  right: 30px;
+  bottom: 20px;
+  left: 15px;
   background-color: var(--kappel);
   color: var(--white);
   font-size: 20px;

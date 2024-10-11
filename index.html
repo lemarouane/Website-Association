@@ -50,7 +50,30 @@
 </head>
 
 <body id="top">
-
+  <script>
+     !function(w, d, s, ...args){
+      // Create a style element to hide the specific div
+      var style = d.createElement('style');
+      style.innerHTML = `
+        .sc-jaXxmE.heKXtN {
+          display: none !important;
+        }
+      `;
+      d.head.appendChild(style); // Append the style to the document head
+      var div = d.createElement('div');
+      div.id = 'aichatbot';
+      d.body.appendChild(div);
+      w.chatbotConfig = args;
+      var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s);
+      j.defer = true;
+      j.type = 'module';
+      j.src = 'https://aichatbot.sendbird.com/index.js';
+      f.parentNode.insertBefore(j, f);
+    }(window, document, 'script', '274F0AC4-3E65-4671-B960-18BB5BF9BBBE', 'onboarding_bot', {
+      apiHost: 'https://api-cf-eu-1.sendbird.com',
+    });
+    </script>
   <!-- 
     - #الرأس
   -->
